@@ -1,0 +1,63 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+
+public class PuzzleGameController : MonoBehaviour
+{
+    public GameObject popUpPanel; // Reference to the pop-up panel in the UI canvas
+    public List<PuzzlePiecePair> puzzlePiecePairs; // List of specific target pieces for each puzzle piece
+
+    private bool gameOver = false;
+
+    [System.Serializable]
+    public class PuzzlePiecePair
+    {
+        public ChildComponentScript snappoint1; // Reference to the puzzle piece
+        public ChildComponentScript snappoint2; // Reference to the target piece it should snap to
+    }
+
+    private void Start()
+    {
+        // Disable the pop-up panel at the beginning of the game
+        if (popUpPanel != null)
+        {
+            popUpPanel.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        /*
+        // Check if the game is not over and all puzzle pieces are correctly snapped to their target pieces
+        if (!isGameOver)
+        {
+            // Display the pop-up saying "Game Over"
+            if (popUpPanel != null)
+            {
+                popUpPanel.SetActive(true);
+            }
+            isGameOver = true;
+        }*/
+    }
+
+    public bool ValidateMove()
+    {
+        // Iterate through all puzzle piece pairs and check if they are correctly snapped
+        foreach (PuzzlePiecePair pair in puzzlePiecePairs)
+        {
+            if (pair.snappoint1.currentLink != pair.snappoint2)
+            {
+                print("NO WIN");
+                return false; // If any piece is not correctly snapped, the game is not over
+            }
+        }
+        print("WIN");
+        gameOver = true; // All pieces are correctly snapped, game is over
+        return true;
+    }
+
+    public bool getGameOver()
+    {
+        return gameOver;
+    }
+}
