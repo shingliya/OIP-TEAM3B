@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MapScene.unity
+    guid: ef752bdf837414e94b09083d59965381
+  - enabled: 1
     path: Assets/Scenes/PuzzleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/DinoScene.unity
+    guid: 92db5f10750c14c66bcda212a4318017
+  - enabled: 1
+    path: Assets/Scenes/MusicVaseScene.unity
+    guid: 39cf8fded7be7b741b55e93d7e9abe26
   m_configObjects: {}
