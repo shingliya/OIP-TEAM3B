@@ -2,18 +2,29 @@ using UnityEngine;
 
 public class MusicVaseScript : MonoBehaviour
 {
+    public AudioClip clickSound;
+
     public bool isDragging = false;
     public MusicPlacementScript currentPlacement = null;
     public MusicPlacementScript targetPlacement;
 
     private Vector3 offset;
-    private const float clickThreshold = 0.1f; // Adjust this value based on your needs.
+    private const float clickThreshold = 0.15f; // Adjust this value based on your needs.
 
     private float zOffset;
+    
+    private AudioSource audioSource;
+    private ParticleSystem particleSys;
 
     void Start()
     {
         zOffset = transform.position.z;
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+
+        particleSys = GetComponent<ParticleSystem>();
+        particleSys.Stop();
     }
 
     private void OnMouseDown()
@@ -50,6 +61,11 @@ public class MusicVaseScript : MonoBehaviour
         if (!isDragging)
         {
             // If the click was detected without dragging, perform click behavior.
+            if (clickSound != null)
+            {
+                audioSource.PlayOneShot(clickSound);
+                particleSys.Play();
+            }
             Debug.Log("Object clicked!");
             // Implement any click behavior you want here.
         }

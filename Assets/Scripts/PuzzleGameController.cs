@@ -18,26 +18,7 @@ public class PuzzleGameController : MonoBehaviour
 
     private void Start()
     {
-        // Disable the pop-up panel at the beginning of the game
-        if (popUpPanel != null)
-        {
-            popUpPanel.SetActive(false);
-        }
-    }
-
-    private void Update()
-    {
-        /*
-        // Check if the game is not over and all puzzle pieces are correctly snapped to their target pieces
-        if (!isGameOver)
-        {
-            // Display the pop-up saying "Game Over"
-            if (popUpPanel != null)
-            {
-                popUpPanel.SetActive(true);
-            }
-            isGameOver = true;
-        }*/
+        popUpPanel.SetActive(false);
     }
 
     public bool ValidateMove()
@@ -51,7 +32,7 @@ public class PuzzleGameController : MonoBehaviour
                 return false; // If any piece is not correctly snapped, the game is not over
             }
         }
-        print("WIN");
+        popUpPanel.SetActive(true);
         gameOver = true; // All pieces are correctly snapped, game is over
         return true;
     }
