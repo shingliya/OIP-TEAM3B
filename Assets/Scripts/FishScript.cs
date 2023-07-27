@@ -38,7 +38,7 @@ public class FishScript : MonoBehaviour
     private void PickRandomRotation()
     {
         targetYRotation = Random.Range(minRotation, maxRotation);
-        transform.rotation = Quaternion.Euler(0f, targetYRotation, 0f);
+        transform.rotation = Quaternion.Euler(90f, targetYRotation, 0f);
     }
 
     private void Burst()
