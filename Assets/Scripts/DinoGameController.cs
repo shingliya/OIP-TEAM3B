@@ -17,6 +17,8 @@ public class DinoGameController : MonoBehaviour
 
     public TextMeshProUGUI scoreText; // Reference to the UI Text component for displaying the score
 
+    public GameObject tutorialPanel;
+
     public GameObject gameOverPanel;
 
     private Coroutine spawnCoroutine;
@@ -69,12 +71,16 @@ public class DinoGameController : MonoBehaviour
 
     public void OnFishDestroyed()
     {
-        points += 10; // Increase points when a fish is destroyed
+        if (tutorialPanel.activeSelf)
+        {
+            tutorialPanel.SetActive(false);
+        }
+        points += 1; // Increase points when a fish is destroyed
         objectsSpawned--; // Decrease objectsSpawned count
         UpdateScoreText();
 
          // Check for the game-over condition
-        if (!isGameOver && points >= 100)
+        if (!isGameOver && points >= 15)
         {
             isGameOver = true;
             GameOver();
@@ -84,7 +90,7 @@ public class DinoGameController : MonoBehaviour
     private void UpdateScoreText()
     {
         // Display the current score in the UI Text
-        scoreText.text = "Score: " + points.ToString();
+        scoreText.text = points.ToString();
     }
 
     private void GameOver()

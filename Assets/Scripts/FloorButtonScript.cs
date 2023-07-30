@@ -5,38 +5,19 @@ using UnityEngine.UI;
 
 public class FloorButtonScript : MonoBehaviour
 {
-    public Image image; // Reference to the Image component
-    public Sprite sprite1; // The first sprite
-    public Sprite sprite2; // The second sprite
-
-    private void Start()
-    {
-        if (image == null)
-        {
-            // Get the Image component from the current GameObject if not assigned
-            image = GetComponent<Image>();
-        }
-
-        if (image == null)
-        {
-            Debug.LogError("ToggleImage script requires an Image component attached to the same GameObject.");
-        }
-    }
+    public GameObject image; // Reference to the Image component
+    public GameObject image2; // The first sprite
 
     // Call this function to toggle between the two sprites
     public void SwitchToFloor1()
     {
-        if (image != null && sprite1 != null && sprite2 != null)
-        {
-            image.sprite = sprite1;
-        }
+        image2.SetActive(false);
+        image.SetActive(true);
     }
 
      public void SwitchToFloor2()
     {
-        if (image != null && sprite1 != null && sprite2 != null)
-        {
-            image.sprite = sprite2;
-        }
+        image.SetActive(false);
+        image2.SetActive(true);
     }
 }

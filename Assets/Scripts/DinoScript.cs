@@ -50,7 +50,7 @@ public class DinoScript : MonoBehaviour
 
             Vector3 lookDir = touchPosition - transform.position;
             float angle = Mathf.Atan2(lookDir.z, lookDir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(90f, -angle, 0f); // Use Euler angles to maintain look-at behavior on the XZ plane
+            transform.rotation = Quaternion.Euler(0f, -angle, 0f); // Use Euler angles to maintain look-at behavior on the XZ plane
         }
     }
 }
