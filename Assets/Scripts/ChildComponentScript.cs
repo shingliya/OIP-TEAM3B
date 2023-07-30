@@ -42,7 +42,7 @@ public class ChildComponentScript : MonoBehaviour
             if(currentLink == null || currentLink == temp)
             {
                 parentScript.OnChildTriggerEnter(this, other.gameObject.transform);
-                meshRenderer.enabled = true; // Enable the MeshRenderer when entering the snapping range
+                //meshRenderer.enabled = true; // Enable the MeshRenderer when entering the snapping range
                 currentLink = temp;
             }
         }
@@ -56,7 +56,7 @@ public class ChildComponentScript : MonoBehaviour
             if(currentLink == null || currentLink == temp)
             {
                 parentScript.OnChildTriggerExit(this, other.gameObject.transform);
-                meshRenderer.enabled = false; // Disable the MeshRenderer when exiting the snapping range
+                //meshRenderer.enabled = false; // Disable the MeshRenderer when exiting the snapping range
                 currentLink = null;
             }
         }
