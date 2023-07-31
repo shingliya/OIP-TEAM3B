@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4071948, g: 0.42986092, b: 0.43530113, a: 1}
+  m_IndirectSpecularColor: {r: 0.4071953, g: 0.42986128, b: 0.4353016, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -191,12 +191,20 @@ PrefabInstance:
       value: Vase (2)
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.662
+      value: -11.337
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -314,6 +322,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8573798280013505925, guid: 2fd6c1d01b94aeb45bcff6490220021d, type: 3}
   m_PrefabInstance: {fileID: 3729233926972804266}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &151661127
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151661122}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &199612445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -524,7 +544,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.77647066, g: 0.7607844, b: 0.72156864, a: 1}
+  m_BackGroundColor: {r: 0.7372549, g: 0.7294118, b: 0.68235296, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -713,12 +733,20 @@ PrefabInstance:
       value: Vase (3)
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.989
+      value: -12.016
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -960,12 +988,20 @@ PrefabInstance:
       value: Vase (1)
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.335
+      value: -9.99
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1761,7 +1797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1828,7 +1864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 8292820609869391891, guid: e8899fd3d2be3404da52131f2b99ac31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1980,6 +2016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wrong
       objectReference: {fileID: 0}
+    - target: {fileID: 7227204595789933101, guid: 2fd6c1d01b94aeb45bcff6490220021d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8573798280013505925, guid: 2fd6c1d01b94aeb45bcff6490220021d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2063,7 +2103,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7227204595789933101, guid: 2fd6c1d01b94aeb45bcff6490220021d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 151661127}
   m_SourcePrefab: {fileID: 100100000, guid: 2fd6c1d01b94aeb45bcff6490220021d, type: 3}
 --- !u!1001 &5491545115242285165
 PrefabInstance:
@@ -2179,12 +2222,20 @@ PrefabInstance:
       value: Vase
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.015
+      value: -10.662
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.587
+      value: 4.571
       objectReference: {fileID: 0}
     - target: {fileID: 718218705299660218, guid: 9ad2190282c90704f97a49269a503b62, type: 3}
       propertyPath: m_LocalPosition.z

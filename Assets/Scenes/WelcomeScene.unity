@@ -460,7 +460,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.25
+  m_fontSize: 31.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3435,7 +3435,7 @@ GameObject:
   - component: {fileID: 1926575595}
   - component: {fileID: 1926575594}
   m_Layer: 5
-  m_Name: Warning
+  m_Name: Wrong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
