@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc0aefc2c03f44b482e8bbc2f59b303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: LeaderboardsScene
+  sceneName: LeaderboardScene
 --- !u!1 &829283349
 GameObject:
   m_ObjectHideFlags: 0
