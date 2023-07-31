@@ -55,9 +55,9 @@ public class ChildComponentScript : MonoBehaviour
             ChildComponentScript temp = other.GetComponent<ChildComponentScript>();
             if(currentLink == null || currentLink == temp)
             {
-                parentScript.OnChildTriggerExit(this, other.gameObject.transform);
                 //meshRenderer.enabled = false; // Disable the MeshRenderer when exiting the snapping range
                 currentLink = null;
+                parentScript.OnChildTriggerExit(this, other.gameObject.transform);
             }
         }
     }

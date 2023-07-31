@@ -65,6 +65,9 @@ public class DialogueController : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
+        bool comandMode = false;
+        string comand = "";
+
         foreach (char letter in line.ToCharArray())
         {
             if (isFastForwarding)
@@ -76,8 +79,28 @@ public class DialogueController : MonoBehaviour
                 break;
             }
 
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            if(letter == '<')
+            {
+                comandMode = true;
+                comand += letter;
+                continue;
+            }
+            
+            if(comandMode)
+            {
+                comand += letter;
+                if(letter == '>')
+                {
+                    comandMode = false;
+                    dialogueText.text += comand;
+                    comand = "";
+                }
+            }
+            else
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
         }
 
         isTyping = false;

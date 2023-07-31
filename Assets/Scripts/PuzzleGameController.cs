@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class PuzzleGameController : MonoBehaviour
 {
     public GameObject popUpPanel; // Reference to the pop-up panel in the UI canvas
+    public TMP_Text instructions;
     public List<PuzzlePiecePair> puzzlePiecePairs; // List of specific target pieces for each puzzle piece
+
 
     private bool gameOver = false;
 
@@ -19,6 +23,33 @@ public class PuzzleGameController : MonoBehaviour
     private void Start()
     {
         popUpPanel.SetActive(false);
+        StartCoroutine(InstructionFade());
+    }
+        
+
+    private IEnumerator InstructionFade()
+    {
+        float timer = 0f;
+        float duration = 4f;
+        
+        while (timer <  duration)
+        {
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+        timer = 0f; duration = 1f;
+        while (timer <  duration)
+        {
+            float progress = timer / duration;
+
+            instructions.alpha = Mathf.Lerp(1, 0, progress);
+
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+        
     }
 
     public bool ValidateMove()

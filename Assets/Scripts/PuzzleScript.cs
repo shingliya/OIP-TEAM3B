@@ -10,12 +10,15 @@ public class PuzzleScript : MonoBehaviour
     private bool isDragging = false;
     public bool isMouseUp = true;
 
-    private Renderer boxRenderer;
+    private Renderer meshRenderer;
 
     public PuzzleGameController gameController;
 
     void Start()
     {
+        // Get the Mesh Renderer component attached to this GameObject
+        meshRenderer = GetComponent<Renderer>();
+
         gameController = FindObjectOfType<PuzzleGameController>();
         snapPoints = new Transform[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
@@ -85,19 +88,44 @@ public class PuzzleScript : MonoBehaviour
 
     public void OnChildTriggerEnter(ChildComponentScript childCollider, Transform other)
     {
-        if(!isSnapped) {
+        //if(!isSnapped)
+         {
         print("in");
         currentSnapPoint = childCollider.gameObject.transform;
         targetSnapPoint = other; 
+        }
+
+        if (meshRenderer.material.shader.name.Contains("Standard"))
+        {
+            // Set the new metallic value for the material
+            meshRenderer.material.SetFloat("_Metallic", 0f);
         }
     }
 
     public void OnChildTriggerExit(ChildComponentScript childCollider, Transform other)
     {
-        if(!isSnapped) {
+        //if(!isSnapped) 
+        {
         print("out");
         currentSnapPoint = null;
         targetSnapPoint = null;
+
+        }
+
+        ChildComponentScript[] childComponents = GetComponentsInChildren<ChildComponentScript>();
+        
+        foreach (ChildComponentScript childComponent in childComponents)
+        {
+            if(childComponent.currentLink != null)
+            {
+                return;
+            }
+        }
+        
+        if (meshRenderer.material.shader.name.Contains("Standard"))
+        {
+            // Set the new metallic value for the material
+            meshRenderer.material.SetFloat("_Metallic", 0.4f);
         }
     }
 }
