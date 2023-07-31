@@ -50,10 +50,32 @@ public class StoryDialogSystem : MonoBehaviour
     private IEnumerator TypeText(string text)
     {
         dialogText.text = "";
+        bool comandMode = false;
+        string comand = "";
+
         foreach (char letter in text)
         {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            if(letter == '<')
+            {
+                comandMode = true;
+                comand += letter;
+                continue;
+            }
+            if(comandMode)
+            {
+                comand += letter;
+                if(letter == '>')
+                {
+                    comandMode = false;
+                    dialogText.text += comand;
+                    comand = "";
+                }
+            }
+            else
+            {
+                dialogText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
         }
 
         typingCoroutine = null;

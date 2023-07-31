@@ -6,7 +6,7 @@ using TMPro;
 
 public class WelcomeController : MonoBehaviour
 {
-    public TMP_InputField nameField;
+    public Text nameField;
     public GameObject emptyNameWarning;
 
     public void enterName()

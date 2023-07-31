@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.00918293, a: 1}
+  m_Color: {r: 0, g: 0.9433962, b: 0.007399298, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.25
+  m_PixelsPerUnitMultiplier: 0.45
 --- !u!222 &171603235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1860,7 +1860,7 @@ MonoBehaviour:
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
-  - text: "Oh no, [PlayerName]! \L\LHelp me! I am stuck behind this wall!"
+  - text: "Oh no, <b>[PlayerName]</b>! \L\LHelp me! I am stuck behind this wall!"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -1884,7 +1884,7 @@ MonoBehaviour:
             m_StringArgument: TrShowOptions
             m_BoolArgument: 0
           m_CallState: 2
-  - text: "I believe it is called the Jewel of....?  \L \L \Lhint: find this artefact"
+  - text: "I believe it is called the Jewel of....?  \L \L \L<b>hint: find this artefact</b>"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
