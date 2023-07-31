@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1835,12 +1835,12 @@ MonoBehaviour:
   dialogText: {fileID: 61177519}
   nextButton: {fileID: 211347644}
   dialogLines:
-  - text: "Welcome to the roman section of the museum. \L \LDoesn't this place just
+  - text: "Welcome to the Roman section of the museum. \L \LDoesn't this place just
       look amazing?!"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
-  - text: "Come, folow me! \L \LThere is something cool I want to show you."
+  - text: "Come, follow me! \L \LThere is something <i>COO</i>-l I want to show you."
     onDialogComplete:
       m_PersistentCalls:
         m_Calls:
@@ -1860,7 +1860,7 @@ MonoBehaviour:
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
-  - text: "Oh no, [PlayerName]! \L\LHelp me! I am stuck behind this wall!"
+  - text: "Oh no, <b>[PlayerName]</b>! \L\LHelp me! I am stuck behind this wall!"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -1884,7 +1884,7 @@ MonoBehaviour:
             m_StringArgument: TrShowOptions
             m_BoolArgument: 0
           m_CallState: 2
-  - text: "I believe it is called the Jewel of....?  \L \L \Lhint: find this artefact"
+  - text: "I believe it is called the Jewel of....?  \L \L \Lhint: Find this artefact"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -1892,7 +1892,7 @@ MonoBehaviour:
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
-  - text: Oh no! The wall! What have we done?
+  - text: Oh no! The wall is in pieces! What have we done?
     onDialogComplete:
       m_PersistentCalls:
         m_Calls:
