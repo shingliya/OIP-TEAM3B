@@ -6,12 +6,12 @@ using TMPro;
 
 public class WelcomeController : MonoBehaviour
 {
-    public Text nameField;
+    public TMP_Text nameField;
     public GameObject emptyNameWarning;
 
     public void enterName()
     {
-        if(nameField.text == "")
+        if(nameField.text.Length == 0)
         {
             emptyNameWarning.SetActive(false);
             emptyNameWarning.SetActive(true);
