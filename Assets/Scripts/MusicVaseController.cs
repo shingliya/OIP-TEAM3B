@@ -10,6 +10,9 @@ public class MusicVaseController : MonoBehaviour
 
     private bool gameOver = false;
 
+    public AudioSource audioSource;
+    public AudioClip victorySFX;
+
     [System.Serializable]
     public class VasePlacementPair
     {
@@ -36,6 +39,7 @@ public class MusicVaseController : MonoBehaviour
                     return;
                 }
             }
+            audioSource.PlayOneShot(victorySFX);
             winAnimation.SetActive(true);
             gameOver = true;
         }

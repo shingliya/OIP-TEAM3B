@@ -10,6 +10,7 @@ public class PuzzleGameController : MonoBehaviour
     public TMP_Text instructions;
     public List<PuzzlePiecePair> puzzlePiecePairs; // List of specific target pieces for each puzzle piece
 
+    public AudioSource audioSource;
 
     private bool gameOver = false;
 
@@ -63,6 +64,7 @@ public class PuzzleGameController : MonoBehaviour
                 return false; // If any piece is not correctly snapped, the game is not over
             }
         }
+        audioSource.Play();
         popUpPanel.SetActive(true);
         gameOver = true; // All pieces are correctly snapped, game is over
         return true;
