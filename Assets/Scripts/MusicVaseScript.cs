@@ -15,6 +15,8 @@ public class MusicVaseScript : MonoBehaviour
     
     private AudioSource audioSource;
     private ParticleSystem particleSys;
+    public AudioClip moveSFX;
+    public AudioSource sfxSource;
 
     void Start()
     {
@@ -82,6 +84,8 @@ public class MusicVaseScript : MonoBehaviour
                 transform.position = new Vector3(targetPlacement.transform.position.x, targetPlacement.transform.position.y, zOffset);
                 currentPlacement = targetPlacement;
                 currentPlacement.currentVase = this;
+
+                sfxSource.PlayOneShot(moveSFX);
             }
             else
             {

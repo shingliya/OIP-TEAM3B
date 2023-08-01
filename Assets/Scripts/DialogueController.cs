@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Import the namespace for TextMeshPro
+using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
     public TMP_Text dialogueText; // Reference to the Text component to display dialogue text
     public GameObject dialogueBox; // Reference to the GameObject that contains the dialogue UI
     public float typingSpeed = 0.05f; // Speed at which the text is displayed (typewriter effect)
+    public AudioSource audioSource;
+    public AudioClip talkSFX;
 
     private List<string> dialogueLines = new List<string>
     {
@@ -72,11 +74,15 @@ public class DialogueController : MonoBehaviour
         {
             if (isFastForwarding)
             {
-                // If fast forward is active, display the entire dialogue at once and break the loop
                 dialogueText.text = line;
                 isFastForwarding = false;
                 isTyping = false;
                 break;
+            }
+
+            if (letter != ' ')
+            {
+                audioSource.PlayOneShot(talkSFX);
             }
 
             if(letter == '<')

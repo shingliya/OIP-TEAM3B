@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevelScript : MonoBehaviour
 {
-    public string sceneName; // The name of the scene you want to load
+    public string sceneName;
 
-    // Call this function to change to another scene
     public void ChangeToScene()
     {
         if (!string.IsNullOrEmpty(sceneName))
@@ -16,7 +15,7 @@ public class ChangeLevelScript : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Scene name is not provided. Please assign a valid scene name.");
+            Debug.LogError("Invalid scene name");
         }
     }
 }

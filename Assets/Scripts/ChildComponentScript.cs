@@ -5,9 +5,9 @@ using UnityEngine;
 public class ChildComponentScript : MonoBehaviour
 {
     PuzzleScript parentScript;
-    MeshRenderer meshRenderer; // Reference to the MeshRenderer component
+    MeshRenderer meshRenderer; 
     
-    public ChildComponentScript currentLink; // The other snappoint that this snappoint is currently linked to
+    public ChildComponentScript currentLink;
 
     private Transform GetRootParent(Transform childTransform)
     {
@@ -20,20 +20,15 @@ public class ChildComponentScript : MonoBehaviour
         return childTransform;
     }
 
-    // ... (other code remains unchanged)
-
     void Start()
     {
         Transform rootParent = GetRootParent(transform);
         parentScript = rootParent.GetComponent<PuzzleScript>();
-        meshRenderer = GetComponent<MeshRenderer>(); // Get the MeshRenderer component
-        meshRenderer.enabled = false; // Set the initial state to disabled
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = false;
         currentLink = null;
     }
 
-    // ... (other code remains unchanged)
-
-    // Implement the OnTriggerEnter method for the child component
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("snapPoint"))

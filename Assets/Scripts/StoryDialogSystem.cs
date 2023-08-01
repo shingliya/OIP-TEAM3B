@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
-using TMPro; // Import the namespace for TextMeshPro
+using TMPro;
 
 public class StoryDialogSystem : MonoBehaviour
 {
@@ -20,6 +20,14 @@ public class StoryDialogSystem : MonoBehaviour
     private int currentLineIndex = 0;
     private Coroutine typingCoroutine;
     private float typingSpeed = 0.05f;
+    public AudioSource audioSource;
+    public AudioClip talkSFX;
+
+    public AudioSource sfxSource;
+    public AudioClip flySFX;
+    public AudioClip crashSFX;
+    public AudioClip breakSFX;
+
 
     private void Start()
     {
@@ -55,7 +63,12 @@ public class StoryDialogSystem : MonoBehaviour
 
         foreach (char letter in text)
         {
-            if(letter == '<')
+            if (letter != ' ' && letter != '-')
+            {
+                audioSource.PlayOneShot(talkSFX);
+            }
+
+            if (letter == '<')
             {
                 comandMode = true;
                 comand += letter;
@@ -107,5 +120,15 @@ public class StoryDialogSystem : MonoBehaviour
     {
         currentLineIndex++;
         ShowDialogLine();
+    }
+
+    public void PlayFlySound(){
+        sfxSource.PlayOneShot(flySFX);
+    }
+    public void PlayCrashSound(){
+        sfxSource.PlayOneShot(crashSFX);
+    }
+    public void PlayBreakSound(){
+        sfxSource.PlayOneShot(breakSFX);
     }
 }

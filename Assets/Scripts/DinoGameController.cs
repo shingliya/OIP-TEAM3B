@@ -8,7 +8,7 @@ public class DinoGameController : MonoBehaviour
     public GameObject objectPrefab; // The prefab of the object you want to spawn
     public int maxObjectsToSpawn = 10; // The maximum number of objects to spawn
     public Bounds spawnArea;
-    public float spawnInterval = 1f; // Time interval between spawns
+    public float spawnInterval = 0.5f; // Time interval between spawns
 
     private int objectsSpawned = 0;
 
@@ -22,6 +22,10 @@ public class DinoGameController : MonoBehaviour
     public GameObject gameOverPanel;
 
     private Coroutine spawnCoroutine;
+
+    public AudioSource audioSource;
+    public AudioClip victorySFX;
+    public AudioClip eatSFX;
 
     private void Start()
     {
@@ -78,6 +82,7 @@ public class DinoGameController : MonoBehaviour
         points += 1; // Increase points when a fish is destroyed
         objectsSpawned--; // Decrease objectsSpawned count
         UpdateScoreText();
+        audioSource.PlayOneShot(eatSFX);
 
          // Check for the game-over condition
         if (!isGameOver && points >= 15)
@@ -95,8 +100,7 @@ public class DinoGameController : MonoBehaviour
 
     private void GameOver()
     {
-        // Perform any game-over actions, such as displaying a game-over panel or message
-        // In this example, we'll just activate the gameOverPanel game object (set it as inactive initially in the Inspector)
+        audioSource.PlayOneShot(victorySFX);
         gameOverPanel.SetActive(true);
         StopSpawnCoroutine();
     }
