@@ -171,7 +171,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 1584802554}
   typingSpeed: 0.05
   audioSource: {fileID: 1451298682}
-  talkSFX: {fileID: 8300000, guid: 0994c12e202f342459a4212e7287f7e8, type: 3}
+  talkSFX: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
 --- !u!1 &89975776
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +318,6 @@ GameObject:
   - component: {fileID: 175921678}
   - component: {fileID: 175921681}
   - component: {fileID: 175921680}
-  - component: {fileID: 175921679}
   m_Layer: 5
   m_Name: DinoBadge
   m_TagString: Untagged
@@ -345,19 +344,6 @@ RectTransform:
   m_AnchoredPosition: {x: 93.00002, y: -89.00001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &175921679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175921677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1855f83a09d3142dcb9217132c591a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: 563604abf337d4e73b9b6b14ed04d421, type: 3}
 --- !u!114 &175921680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,7 +1609,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2250,7 +2236,6 @@ GameObject:
   - component: {fileID: 1736419982}
   - component: {fileID: 1736419985}
   - component: {fileID: 1736419984}
-  - component: {fileID: 1736419983}
   m_Layer: 5
   m_Name: SoundBadge
   m_TagString: Untagged
@@ -2277,19 +2262,6 @@ RectTransform:
   m_AnchoredPosition: {x: 243.00003, y: -89.00001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1736419983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736419981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1855f83a09d3142dcb9217132c591a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: b241ad903025f4c879a5da7d1876689b, type: 3}
 --- !u!114 &1736419984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2506,7 +2478,6 @@ GameObject:
   - component: {fileID: 1974094393}
   - component: {fileID: 1974094396}
   - component: {fileID: 1974094395}
-  - component: {fileID: 1974094394}
   m_Layer: 5
   m_Name: RomanBadge
   m_TagString: Untagged
@@ -2533,19 +2504,6 @@ RectTransform:
   m_AnchoredPosition: {x: -57, y: -89}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1974094394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974094392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1855f83a09d3142dcb9217132c591a22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: fa65f6e97df2b4672a7b3f009b1d732a, type: 3}
 --- !u!114 &1974094395
 MonoBehaviour:
   m_ObjectHideFlags: 0

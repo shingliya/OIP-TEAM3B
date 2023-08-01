@@ -2045,7 +2045,7 @@ MonoBehaviour:
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
-  - text: Oh no! The wall is in pieces! What have we done?
+  - text: "Oh no! The wall is in pieces!\L\L\LWhat have we done?"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls:
@@ -2061,7 +2061,8 @@ MonoBehaviour:
             m_StringArgument: TrStartGame
             m_BoolArgument: 0
           m_CallState: 2
-  - text: Help me fix the wall please!
+  - text: "<b>[PlayerName]</b>, can you please help me piece the wall back together?\L   
+      \L<b>hint: press play to begin game</b>\L\L"
     onDialogComplete:
       m_PersistentCalls:
         m_Calls: []
