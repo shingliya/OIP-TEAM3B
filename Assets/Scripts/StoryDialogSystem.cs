@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
-using TMPro; // Import the namespace for TextMeshPro
+using TMPro;
 
 public class StoryDialogSystem : MonoBehaviour
 {

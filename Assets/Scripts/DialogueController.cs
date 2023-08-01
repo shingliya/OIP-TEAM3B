@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Import the namespace for TextMeshPro
+using TMPro;
 
 public class DialogueController : MonoBehaviour
 {

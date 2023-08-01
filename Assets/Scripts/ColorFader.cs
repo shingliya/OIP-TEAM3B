@@ -9,7 +9,7 @@ public class ColorFader : MonoBehaviour
     public float fadeDuration = 1f;
 
     private Image imageComponent;
-    private bool isFadingForward = true; // Flag to determine if we are currently fading forward or backward
+    private bool isFadingForward = true; 
 
     private void Start()
     {
@@ -35,7 +35,6 @@ public class ColorFader : MonoBehaviour
                 time += Time.deltaTime;
                 float t = Mathf.Clamp01(time / fadeDuration);
 
-                // Interpolate the color between initialColor and target using t as the time value
                 Color currentColor = Color.Lerp(initialColor, target, t);
 
                 if (imageComponent != null)
@@ -45,8 +44,6 @@ public class ColorFader : MonoBehaviour
 
                 yield return null;
             }
-
-            // Reverse the fade direction
             isFadingForward = !isFadingForward;
         }
     }
