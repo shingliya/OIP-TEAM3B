@@ -72,5 +72,3 @@ Shyam - [GitHub](https://github.com/shyxxm) - [LinkedIn](https://www.linkedin.co
 Ayan - [GitHub](https://github.com/csgnwinter) - [LinkedIn](www.linkedin.com/in/ayan-priyadarshi-52621757/)<br />
 Ivan - [GitHub](https://github.com/shingliya) - [LinkedIn](https://www.linkedin.com/in/leongwengyanivan/)<br />
 Jeff - [GitHub](https://github.com/miscting) - [LinkedIn](https://www.linkedin.com/in/jeffleejh/)<br />
- 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
