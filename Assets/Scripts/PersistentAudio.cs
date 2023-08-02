@@ -33,12 +33,12 @@ public class PersistentAudio : MonoBehaviour
         if (currentScene.name == "MusicVaseScene")
         {
             // Lower the volume in the specified scene
-            audioSource.volume = 0.5f;
+            audioSource.volume = 0.2f;
         }
         else
         {
             // Set the volume to the normal volume in other scenes
-            audioSource.volume = 1;
+            audioSource.volume = 0.5f;
         }
     }
 }
