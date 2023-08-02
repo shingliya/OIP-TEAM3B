@@ -1,5 +1,3 @@
-
-
 <div align="center">
 
   <h2 align="center">SIT-UoG Computing Science</h2>
@@ -25,7 +23,7 @@ This is a design project done in collaboration with The Hunterian Museum as part
 <br />
 
 ## Problem Statement
-To design a smartphone-compatible web application aimed at enriching the museum experience for children aged 11 to 14, providing interactive and meaningful encounters with artefacts to foster engagement during their visits.
+To design a smartphone-compatible web application aimed at enriching the museum experience for children aged 11 to 14, providing interactive and meaningful encounters with artifacts to foster engagement during their visits.
 
 <br />
 
@@ -38,7 +36,7 @@ The application is intended to run on smartphone browsers<br />
 
 ## Folder Structure
 The resources used for the project can be found in [Assets](Assets) folder.<br />
-The sub directories are as follows:
+The sub-directories are as follows:
 -   Animation - unity animation and controller files
 -   Art Assets - images and textures
 -   Font - text font files
@@ -46,18 +44,18 @@ The sub directories are as follows:
 -   Packages - external plug-ins/add-ons (scripts, images, audio)
 -   Prefabs - unity template files for creating object instances
 -   Scenes - unity scene files (e.g splash screen, map screen, story screen)
--   Scripts - c# script files for controling application logic
+-   Scripts - c# script files for controlling application logic
 -   Sound - audio files
 
 <br />
 
 ## Getting Started
-This are the instructions for setting up the project.<br />
+These are the instructions for setting up the project.<br />
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 You are required to have [Unity3D](https://unity.com/) installed, prefeblly verison 2022.3.5f1 or higher.<br />
-A code editor such as [Visual Studio Code](https://code.visualstudio.com/) is recomended for editing scripts.
+A code editor such as [Visual Studio Code](https://code.visualstudio.com/) is recommended for editing scripts.
 
 ### Running the Project
 1. Download the repo (as zip or clone).
@@ -76,5 +74,3 @@ Ivan - [GitHub](https://github.com/shingliya) - [LinkedIn](https://www.linkedin.
 Jeff - [GitHub](https://github.com/miscting) - [LinkedIn](https://www.linkedin.com/in/jeffleejh/)<br />
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
