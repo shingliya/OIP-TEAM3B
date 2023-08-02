@@ -14,6 +14,9 @@ public class PuzzleScript : MonoBehaviour
 
     public PuzzleGameController gameController;
 
+    public AudioSource audioSource;
+    public AudioClip snapSound;
+
     void Start()
     {
         // Get the Mesh Renderer component attached to this GameObject
@@ -60,24 +63,11 @@ public class PuzzleScript : MonoBehaviour
 
              // Draw the raycast in the Scene view to visualize it
             Debug.DrawRay(currentSnapPoint.position, direction.normalized * distance, Color.blue, 2f);
-
-/*
-            // Check for any colliders hit by the raycast
-            foreach (RaycastHit hit in hits)
-            {
-                print(hit.transform.gameObject);
-                if (hit.collider != null && hit.collider != currentSnapPoint && hit.collider != targetSnapPoint)
-                {
-                    currentSnapPoint = null;
-                    targetSnapPoint = null;
-                    return; // Exit the method, no snapping should occur
-                }
-            }
-*/
-            // Snap the pieces together if there are no obstacles between the snap points
+            
             Vector3 translation = targetSnapPoint.position - currentSnapPoint.position;
             isSnapped = true;
             transform.Translate(translation);
+            audioSource.PlayOneShot(snapSound);
             if (gameController != null)
             {
                 print("check game over");
@@ -89,10 +79,10 @@ public class PuzzleScript : MonoBehaviour
     public void OnChildTriggerEnter(ChildComponentScript childCollider, Transform other)
     {
         //if(!isSnapped)
-         {
-        print("in");
-        currentSnapPoint = childCollider.gameObject.transform;
-        targetSnapPoint = other; 
+        {
+            print("in");
+            currentSnapPoint = childCollider.gameObject.transform;
+            targetSnapPoint = other;
         }
 
         if (meshRenderer.material.shader.name.Contains("Standard"))
@@ -106,10 +96,9 @@ public class PuzzleScript : MonoBehaviour
     {
         //if(!isSnapped) 
         {
-        print("out");
-        currentSnapPoint = null;
-        targetSnapPoint = null;
-
+            print("out");
+            currentSnapPoint = null;
+            targetSnapPoint = null;
         }
 
         ChildComponentScript[] childComponents = GetComponentsInChildren<ChildComponentScript>();
